@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: #1F060E;
+  color: #FAF7F2;
+  overflow-x: hidden;
+}
+
+/* Custom Serif Typography */
+.font-display {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Glassmorphism & Luxury Panels */
+.glass-card {
+  background: rgba(39, 8, 17, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(222, 126, 149, 0.15);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(53, 16, 26, 0.8);
+  border-color: rgba(222, 126, 149, 0.35);
+  box-shadow: 0 12px 36px -10px rgba(100, 27, 47, 0.4);
+  transform: translateY(-2px);
+}
+
+.glass-card-subtle {
+  background: rgba(31, 6, 14, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(238, 177, 189, 0.08);
+}
+
+.glass-input {
+  background: rgba(25, 5, 12, 0.6);
+  border: 1px solid rgba(222, 126, 149, 0.2);
+  color: #FAF7F2;
+}
+
+.glass-input:focus {
+  border-color: #E04770;
+  box-shadow: 0 0 0 3px rgba(224, 71, 112, 0.2);
+  outline: none;
+}
+
+/* Luxury Gradients */
+.gradient-text-gold {
+  background: linear-gradient(135deg, #FAF0D4 0%, #D7B447 50%, #FAF0D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-blush {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFCAD6 60%, #FFA3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-wine {
+  background: linear-gradient(135deg, #FFA3B8 0%, #E04770 50%, #FAF7F2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-button-primary {
+  background: linear-gradient(135deg, #8A233F 0%, #AC3353 50%, #C74F6E 100%);
+  box-shadow: 0 4px 20px rgba(172, 51, 83, 0.35);
+  transition: all 0.25s ease;
+}
+
+.gradient-button-primary:hover {
+  background: linear-gradient(135deg, #9E2B4A 0%, #BD3B5E 50%, #D65C7C 100%);
+  box-shadow: 0 6px 25px rgba(224, 71, 112, 0.5);
+  transform: translateY(-1px);
+}
+
+.gradient-button-primary:active {
+  transform: translateY(1px);
+}
+
+/* Ambient glow accents */
+.glow-wine {
+  box-shadow: 0 0 50px 10px rgba(138, 35, 63, 0.25);
+}
+
+.glow-blush {
+  box-shadow: 0 0 40px 8px rgba(255, 163, 184, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A050C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4F1B28;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8C3D51;
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.08);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 16s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 7s ease-in-out infinite;
+}
